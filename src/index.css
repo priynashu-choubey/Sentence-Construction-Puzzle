@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@keyframes vertical-flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.vertical-flip {
+  animation: vertical-flip 2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+* {
+  font-family: "Inter", sans-serif !important;
+}
