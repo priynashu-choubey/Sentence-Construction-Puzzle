@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 interface TimerProps {
   timeLeft: number;
   setTimeLeft: React.Dispatch<React.SetStateAction<number>>;
@@ -13,7 +14,8 @@ const Timer: React.FC<TimerProps> = ({
   active,
 }) => {
   useEffect(() => {
-    if (!active) return;
+    if (!active || timeLeft <= 0) return;
+
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
@@ -24,13 +26,15 @@ const Timer: React.FC<TimerProps> = ({
         return prev - 1;
       });
     }, 1000);
+
     return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active]);
+  }, [active, timeLeft]);
 
   return (
     <span className="flex justify-between items-center mb-4">
-      <span className="text-gray-600 font-medium">0:{timeLeft}</span>
+      <span className="text-gray-600 font-medium">
+        0:{timeLeft.toString().padStart(2, "0")}
+      </span>
     </span>
   );
 };
