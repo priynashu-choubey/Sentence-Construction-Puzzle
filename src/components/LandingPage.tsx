@@ -25,7 +25,7 @@ const StatSection: React.FC = () => (
       value={
         <>
           <div className="h-3 w-3 rounded-full border border-yellow-300 bg-yellow-400 animate-pulse" />
-          <span>0</span>
+          <span>20</span>
         </>
       }
     />
