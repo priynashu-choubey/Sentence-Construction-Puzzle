@@ -2,7 +2,7 @@ import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useQuiz } from "./hooks/useQuiz";
 import Quiz from "./components/Quiz";
-import LandingPage from "./components/LandingPage"; // Make sure this is the correct path
+import LandingPage from "./components/LandingPage";
 
 const queryClient = new QueryClient();
 
