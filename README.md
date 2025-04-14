@@ -31,12 +31,7 @@ npm run dev
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## 🧩 Folder Structure
-── package.json
-├── package-lock.json
-├── public
-│   └── vite.svg
-├── README.md
-├── sample.json
+
 ├── src
 │   ├── App.tsx
 │   ├── assets
