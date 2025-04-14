@@ -3,31 +3,42 @@ import React from "react";
 interface QuestionProps {
   sentence: string;
   selectedWords: string[];
-  onBlankClick: (index: number) => void;
+  onBlankClick?: (index: number) => void;
+  readOnly?: boolean;
 }
 
 const Question: React.FC<QuestionProps> = ({
   sentence,
   selectedWords,
   onBlankClick,
+  readOnly = false,
 }) => {
   const parts = sentence.split("_____________");
 
   return (
-    <div className="sentence-container bg-white p-4 rounded-lg text-lg  flex flex-wrap justify-center gap-2 mb-8">
+    <div className="bg-white p-4 rounded-lg text-[17px] leading-8 font-medium text-neutral-500 flex flex-wrap justify-center gap-x-2 gap-y-3 text-center">
       {parts.map((part, i) => (
         <React.Fragment key={i}>
-          <span>{part.trim()}</span>
+          {part && <span>{part.trim()}</span>}
+
           {i < parts.length - 1 && (
             <span
-              onClick={() => onBlankClick(i)}
-              className={`relative inline-block  my-6 `}
+              onClick={() => {
+                if (!readOnly && onBlankClick) onBlankClick(i);
+              }}
+              className={`inline-flex items-center justify-center min-w-[80px] px-2 py-1 border-b-2 transition-all ${
+                readOnly
+                  ? "cursor-default border-neutral-300"
+                  : "cursor-pointer border-neutral-400"
+              }`}
             >
-              <div className="w-40 min-w-min"></div>
-              <span className="absolute">_____________</span>
-              {selectedWords[i] && (
-                <span className="absolute  mx-1 min-w-[120px] -top-6 left-0 text-center px-2 py-1  text-gray-700  cursor-pointer rounded-lg border border-gray-300">
+              {selectedWords[i] ? (
+                <span className="px-3 py-1 bg-white border border-gray-300 rounded-md text-neutral-700 shadow-sm text-sm">
                   {selectedWords[i]}
+                </span>
+              ) : (
+                <span className="text-transparent select-none">
+                  placeholder
                 </span>
               )}
             </span>
@@ -39,4 +50,3 @@ const Question: React.FC<QuestionProps> = ({
 };
 
 export default Question;
-
