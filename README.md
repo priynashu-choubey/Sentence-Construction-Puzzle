@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# Sentence Construction Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web app built with **React** and **Tailwind CSS** that helps users practice sentence construction by filling in missing words. It features a sleek, Figma-inspired UI, real-time feedback, and detailed results analysis.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🧩 Fill-in-the-blank style sentence quizzes
+- ⏱️ Timed questions to keep you on your toes
+- ✅ Real-time answer checking and scoring
+- 📊 Results page showing correct vs. incorrect responses
+- ⚛️ Built with React + Tailwind CSS
+- 🔄 Data fetching with React Query (`@tanstack/react-query`)
 
-## Expanding the ESLint configuration
+```bash
+# Clone the repo
+git clone https://github.com/your-username/sentence-construction-app.git
+cd sentence-construction-app
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Install dependencies
+npm install
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# Start the app
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Query](https://tanstack.com/query/latest)
+- [TypeScript](https://www.typescriptlang.org/)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🧩 Folder Structure
+── package.json
+├── package-lock.json
+├── public
+│   └── vite.svg
+├── README.md
+├── sample.json
+├── src
+│   ├── App.tsx
+│   ├── assets
+│   ├── components
+│   │   ├── LandingPage.tsx
+│   │   ├── Options.tsx
+│   │   ├── Question.tsx
+│   │   ├── QuitButton.tsx
+│   │   ├── Quiz.tsx
+│   │   ├── Results.tsx
+│   │   └── Timer.tsx
+│   ├── hooks
+│   │   └── useQuiz.ts
+│   ├── index.css
+│   ├── main.tsx
+│   ├── types
+│   │   └── index.ts
+│   ├── utils
+│   │   └── compareAnswers.ts
+│   └── vite-env.d.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome! Fork the repo and submit a pull request 🙌
+
+## 📄 License
+
+MIT License © Priyanshu Choubey
