@@ -13,8 +13,8 @@ An interactive web app built with **React** and **Tailwind CSS** that helps user
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/sentence-construction-app.git
-cd sentence-construction-app
+git clone https://github.com/your-username/sentence-construction-puzzle.git
+cd sentence-construction-puzzle
 
 # Install dependencies
 npm install
