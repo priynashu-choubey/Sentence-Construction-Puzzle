@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 @keyframes vertical-flip {
   0% {
@@ -16,4 +17,12 @@
 
 * {
   font-family: "Inter", sans-serif !important;
+}
+
+.sentence-text {
+  @apply text-neutral-700 text-[17px] font-medium leading-8 text-center;
+}
+
+.blank {
+  @apply inline-block min-w-[70px] border-b border-neutral-400 mx-1 align-baseline;
 }

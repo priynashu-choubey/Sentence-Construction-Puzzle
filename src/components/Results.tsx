@@ -87,13 +87,14 @@ const Results: React.FC<ResultsProps> = ({ questions, userAnswers }) => {
                 </div>
 
                 {/* Your Response */}
+                {/* Your Response */}
                 <div className="bg-gray-100 px-6 pt-4 pb-6">
-                  <div className="flex items-center justify-between mb-1">
+                  <div className="flex items-center gap-2 mb-1">
                     <p className="text-sm text-gray-500 font-medium">
                       Your response
                     </p>
                     <span
-                      className={`text-xs font-semibold px-2 py-1 rounded-full ${
+                      className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
                         isCorrect
                           ? "bg-green-100 text-green-700"
                           : "bg-red-100 text-red-700"

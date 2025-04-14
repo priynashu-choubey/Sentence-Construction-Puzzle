@@ -18,7 +18,7 @@ const Quiz: React.FC<QuizProps> = ({ data }) => {
   );
   const [timeLeft, setTimeLeft] = useState(30);
   const [finished, setFinished] = useState(false);
-  console.log({ data });
+
   const current = data.questions[currentIndex];
 
   const onTimeUp = () => {
@@ -64,7 +64,7 @@ const Quiz: React.FC<QuizProps> = ({ data }) => {
             onTimeUp={onTimeUp}
             active
           />
-          <QuitButton />
+          <QuitButton onClick={() => setFinished(true)} />
         </div>
 
         <div className="flex gap-2 mb-6">
