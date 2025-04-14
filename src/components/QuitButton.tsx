@@ -14,4 +14,3 @@ const QuitButton: React.FC<QuitButtonProps> = ({ onClick }) => {
 };
 
 export default QuitButton;
-

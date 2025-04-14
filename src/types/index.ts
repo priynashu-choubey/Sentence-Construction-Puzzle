@@ -8,7 +8,6 @@ export interface Question {
 }
 
 export interface QuizData {
-  data: QuizData;
   testId: string;
   questions: Question[];
 }

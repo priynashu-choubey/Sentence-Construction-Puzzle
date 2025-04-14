@@ -49,4 +49,3 @@ const Results: React.FC<ResultsProps> = ({ questions, userAnswers }) => {
 };
 
 export default Results;
-
