@@ -28,7 +28,7 @@ const AppContent = () => {
 
   if (!data) return null;
 
-  return <Quiz data={data?.data} />;
+  return <Quiz data={data.data} />;
 };
 
 const App = () => (

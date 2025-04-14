@@ -28,7 +28,7 @@ const Timer: React.FC<TimerProps> = ({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [active, timeLeft]);
+  }, [active, timeLeft, setTimeLeft, onTimeUp]);
 
   return (
     <span className="flex justify-between items-center mb-4">
