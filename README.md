@@ -1,6 +1,6 @@
 # Sentence Construction Quiz App
 
-An interactive web app built with **React** and **Tailwind CSS** that helps users practice sentence construction by filling in missing words. It features a sleek, Figma-inspired UI, real-time feedback, and detailed results analysis.
+An interactive web app built with **React** and **Tailwind CSS** that helps users practice sentence construction by filling in missing words. It features a sleek, Figma-inspired UI, real-time feedback, and detailed results analysis.Although it weas an assignment project I enjoyed it.
 
 ## 🚀 Features
 
