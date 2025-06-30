@@ -30,32 +30,6 @@ npm run dev
 - [React Query](https://tanstack.com/query/latest)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## 🧩 Folder Structure
-
-├── src
-│   ├── App.tsx
-│   ├── assets
-│   ├── components
-│   │   ├── LandingPage.tsx
-│   │   ├── Options.tsx
-│   │   ├── Question.tsx
-│   │   ├── QuitButton.tsx
-│   │   ├── Quiz.tsx
-│   │   ├── Results.tsx
-│   │   └── Timer.tsx
-│   ├── hooks
-│   │   └── useQuiz.ts
-│   ├── index.css
-│   ├── main.tsx
-│   ├── types
-│   │   └── index.ts
-│   ├── utils
-│   │   └── compareAnswers.ts
-│   └── vite-env.d.ts
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.node.json
-└── vite.config.ts
 
 
 
